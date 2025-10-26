@@ -1,0 +1,68 @@
+.tollbar-title {
+  font-size: xx-large;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.home-content {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  --background: rgb(0, 0, 0);
+}
+
+.h-section {
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 220px;
+  height: auto;
+  margin: 0 auto 0px;
+}
+
+.description-card {
+  max-width: 800px;
+  margin: 20px auto;
+  --background: rgb(0, 0, 0);
+  --color: rgb(255, 255, 255);
+  text-align: justify;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 80px rgb(0, 0, 0, 0.5);
+  font-family: 'Libre Baskerville', serif;
+}
+
+.description-card ion-card-title {
+  color: rgb(255, 255, 255);
+  text-align: center;
+  font-family: 'Libre Baskerville', serif;
+}
+
+.description-card ion-card-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+}
+
+.explore-button {
+  margin: 20px;
+  max-width: 300px;
+  --background: rgba(100, 100, 100, 0.1);
+  --color: rgb(255, 255, 255);
+  border: 2px solid rgba(255, 255, 255, 0.274);
+}
+
+.news-modal {
+  --width: 30%;
+  --height: 30%;
+  --border-radius: 5px;
+  --box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  --backdrop-opacity: 0.2;
+}
