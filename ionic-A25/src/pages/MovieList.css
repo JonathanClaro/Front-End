@@ -1,0 +1,213 @@
+.page-title {
+  font-size: xx-large;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+
+.mv-card {
+  cursor: pointer;
+  border-radius: 10px;
+  background: transparent;
+  box-shadow: none;
+}
+
+.poster-wrapper {
+  position: relative;
+}
+
+.movie-card-img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  aspect-ratio: 2 / 3; 
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .35);
+}
+
+.mv-card:hover .movie-card-img {
+  transform: scale(1.04);
+  box-shadow: 0 0 26px 4px rgba(255, 215, 0, 0.7); 
+}
+
+
+.rating-circle {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #fff;
+  z-index: 2;            
+  pointer-events: none;  
+}
+
+.rating-circle.high   { background: #21d07a; box-shadow: 0 0 10px rgba(33,208,122,.55); }
+.rating-circle.medium { background: #d2d531; box-shadow: 0 0 10px rgba(210,213,49,.55); }
+.rating-circle.low    { background: #db2360; box-shadow: 0 0 10px rgba(219,35,96,.55); }
+
+
+.news-modal {
+  --background: rgba(20,20,20,0.96);
+  color: #fff;
+}
+.news-modal ion-toolbar {
+  --background: rgba(255,255,255,0.06);
+  color: #fff;
+}
+.news-modal ion-item {
+  --background: transparent;
+  --border-color: #555;
+  color: #fff;
+}
+.news-modal ion-button {
+  --background: #f5c518;
+  --color: #000;
+  font-weight: 700;
+}
+
+.modal-details::part(content) {
+  width: min(860px, 92vw);
+  height: auto;         
+  max-height: 85vh;      
+  background: #141414;
+  border-radius: 14px;
+  box-shadow: 0 12px 36px rgba(0,0,0,.65);
+}
+
+
+.modal-details .modal-wrapper {
+  width: min(860px, 92vw) !important;
+  height: auto !important;
+  max-height: 85vh !important;
+  background: #141414 !important;
+  border-radius: 14px !important;
+  box-shadow: 0 12px 36px rgba(0,0,0,.65) !important;
+}
+
+.modal-details ion-header ion-toolbar {
+  --background: rgba(255,255,255,0.06);
+  color: #fff;
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+}
+
+.modal-details ion-content {
+  --padding-top: 16px;
+  --padding-bottom: 16px;
+}
+
+.detail-layout {
+  display: grid;
+  grid-template-columns: 36% 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.movie-modal-img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+.detail-tagline {
+  font-style: italic;
+  color: #f5c518;
+  margin: 0 0 6px 0;
+}
+
+.detail-plot {
+  color: #ddd;
+  line-height: 1.55;
+  margin: 0 0 12px 0;
+}
+
+.chip-row { margin: 6px 0 14px; }
+
+.chip {
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 0 8px 8px 0;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: #eee;
+}
+
+
+.facts-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 10px 22px;
+  margin: 4px 0 12px;
+}
+.facts-grid h5 {
+  font-size: 0.8rem;
+  color: #bdbdbd;
+  margin: 0 0 2px 0;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+.facts-grid p {
+  margin: 0;
+  color: #fff;
+}
+
+
+.notes-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 12px 0 8px;
+}
+.notes-block h4 {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+}
+.notes-block ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #ddd;
+}
+
+.notes-block li { margin-bottom: 4px; }
+
+.trailer-row { margin: 10px 0 8px; }
+
+.trailer-btn {
+  display: inline-block;
+  padding: 10px 14px;
+  background: #f5c518;
+  color: #000;
+  border-radius: 8px;
+  font-weight: 800;
+  text-decoration: none;
+}
+.trailer-btn:hover { filter: brightness(1.08); }
+
+.modal-details ion-button {
+  --background: #3a63ff;
+  --color: #fff;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.modal-details ion-content {
+  min-height: 600px;
+  display: block;
+}
+
+
+/* Jonathan Claro a045207 */
