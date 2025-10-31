@@ -1,118 +1,8 @@
 .releases-page {
   background-color: #0d0d0d;
   color: #fff;
-  padding: 40px 0;
-}
-
-.release-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 40px;
-}
-
-.release-card {
-  display: flex;
-  align-items: stretch;
-  gap: 20px;
-  width: 55%;
-  min-width: 650px;
-  max-width: 900px;
-  background: rgba(255, 255, 255, 0.03);
-  border-radius: 16px;
-  padding: 20px;
-  box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.release-card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 35px rgba(255, 215, 0, 0.2);
-}
-
-
-.poster {
-  position: relative;
-  flex-shrink: 0;
-  width: 40%;
-}
-.poster img {
-  width: 100%;
-  border-radius: 12px;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  transition: transform 0.25s ease;
-}
-.poster img:hover {
-  transform: scale(1.03);
-  box-shadow: none; 
-}
-
-
-.rating-circle {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 0.9rem;
-  color: #fff;
-}
-.rating-green { background: #21d07a; box-shadow: 0 0 10px rgba(33,208,122,0.5); }
-.rating-yellow { background: #d2d531; box-shadow: 0 0 10px rgba(210,213,49,0.5); }
-.rating-red { background: #db2360; box-shadow: 0 0 10px rgba(219,35,96,0.5); }
-
-
-.release-info {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.release-info h2 {
-  margin: 0;
-  font-size: 1.8rem;
-  font-weight: 800;
-}
-.genre {
-  font-size: 1rem;
-  color: #ffd700;
-  margin-bottom: 10px;
-}
-.synopsis {
-  color: #ccc;
-  margin-bottom: 10px;
-  line-height: 1.4;
-}
-
-.critic {
-  font-style: italic;
-  color: #bbb;
-  border-left: 3px solid #ffd700;
-  padding-left: 10px;
-  margin-bottom: 12px;
-}
-
-.ficha-tecnica {
-  background: rgba(255, 255, 255, 0.05);
-  border-left: 3px solid #ffd700;
-  padding: 10px 15px;
-  margin: 5px 0;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  color: #ddd;
-}
-.ficha-tecnica p {
-  margin: 3px 0;
-  line-height: 1.3;
-}
-.ficha-tecnica strong {
-  color: #fff;
+  padding: 40px 0 80px;
+  font-family: "Poppins", sans-serif;
 }
 
 .page-subtitle {
@@ -121,10 +11,190 @@
   color: #f5c518;
   font-weight: 700;
   letter-spacing: 1px;
-  margin-bottom: 30px;
-  margin-top: 20px;
   text-transform: uppercase;
+  margin-top: 35px;   
+  margin-bottom: 20px;
+}
+
+.release-grid {
+  display: flex;
+  justify-content: center;
+}
+
+.release-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+.release-col {
+  flex: 1 1 45%;
+  display: flex;
+  justify-content: center;
+}
+
+.release-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  padding: 16px;
+  max-width: 420px;
+  width: 100%;
+}
+
+.release-card:hover {
+  transform: scale(1.02);
+}
+
+.poster {
+  margin-bottom: 12px;
+}
+
+.poster ion-img {
+  width: 100%;
+  border-radius: 10px;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  transition: transform 0.25s ease;
+}
+
+.poster ion-img:hover {
+  transform: scale(1.03);
+}
+
+.release-card ion-card-header {
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.release-card ion-card-title {
+  font-size: 1.2rem;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+}
+
+.release-card ion-card-content {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   
+  text-align: center;    
+}
+.genre {
+  font-size: 0.9rem;
+  color: #ffd700;
+  margin-bottom: 8px;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+}
+
+.synopsis {
+  color: #ccc;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  max-width: 80%;
+  margin-bottom: 40px;
 }
 
 
-/* Jonathan Claro a045207 */
+.tech-accordion {
+  background: none;
+  border: none;
+  margin: 0 auto;
+  margin-top: 20px; 
+  width: 90%;
+  border-radius: 6px;
+}
+
+.accordion-trigger {
+  --background: rgba(255, 255, 255, 0.06);
+  --color: #ffd700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: background 0.3s ease;
+}
+
+.accordion-trigger:hover {
+  --background: rgba(255, 255, 255, 0.12);
+}
+
+.accordion-label {
+  color: #ffd700;
+  font-weight: 600;
+}
+
+.accordion-icon {
+  color: #ffd700;
+  font-size: 0.9rem;
+}
+
+.accordion-content {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  padding: 12px 16px;
+  font-size: 0.8rem;
+  color: #ddd;
+  line-height: 1.4;
+  margin-top: 8px;
+  text-align: left;
+}
+
+.accordion-content p {
+  margin: 4px 0;
+  font-size: 0.8rem;
+  line-height: 1.4;
+}
+
+.accordion-content strong {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* NAVBAR */
+.custom-toolbar {
+  --background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.headerTitle {
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+ion-button {
+  --background: transparent;
+  --color: #cfcfcf;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  transition: color 0.2s ease-in-out;
+}
+
+ion-button:hover {
+  --color: #e0b45c;
+}

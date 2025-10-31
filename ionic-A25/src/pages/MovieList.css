@@ -1,213 +1,234 @@
-.page-title {
-  font-size: xx-large;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
-    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+/* página geral */
+.movie-list-page {
+  background-color: #0d0d0d;
+  color: #fff;
+  min-height: 100%;
+  padding-bottom: 60px;
+  font-family: "Poppins", sans-serif;
+}
+
+.movie-list-title {
+  text-align: center;
+  font-size: 2rem;
+  color: #f5c518;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* barra de pesquisa */
+.search-wrapper {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  width: 90%;
+}
+
+.searchbar-themed {
+  --background: rgba(255, 255, 255, 0.07);
+  --color: #fff;
+  --icon-color: #f5c518;
+  --placeholder-color: #999;
+  --clear-button-color: #999;
+  border-radius: 8px;
+  --border-radius: 8px;
+  --box-shadow: 0 0 12px rgba(0,0,0,0.6);
   color: #fff;
 }
 
-
-.mv-card {
-  cursor: pointer;
-  border-radius: 10px;
-  background: transparent;
-  box-shadow: none;
+/* grid de posters */
+.poster-grid {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.poster-wrapper {
-  position: relative;
+.poster-row {
+  justify-content: center;
+  row-gap: 30px;
+  margin-bottom: 30px;
+}
+
+.poster-col {
+  display: flex;
+  justify-content: center;
+}
+
+/* card de filme */
+.mv-card {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+  width: 100%;
+  max-width: 240px;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+.mv-card:hover {
+  transform: scale(1.03);
 }
 
 .movie-card-img {
   width: 100%;
-  border-radius: 12px;
-  object-fit: cover;
-  aspect-ratio: 2 / 3; 
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, .35);
-}
-
-.mv-card:hover .movie-card-img {
-  transform: scale(1.04);
-  box-shadow: 0 0 26px 4px rgba(255, 215, 0, 0.7); 
-}
-
-
-.rating-circle {
-  position: absolute;
-  top: 8px;
-  left: 8px;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #fff;
-  z-index: 2;            
-  pointer-events: none;  
-}
-
-.rating-circle.high   { background: #21d07a; box-shadow: 0 0 10px rgba(33,208,122,.55); }
-.rating-circle.medium { background: #d2d531; box-shadow: 0 0 10px rgba(210,213,49,.55); }
-.rating-circle.low    { background: #db2360; box-shadow: 0 0 10px rgba(219,35,96,.55); }
-
-
-.news-modal {
-  --background: rgba(20,20,20,0.96);
-  color: #fff;
-}
-.news-modal ion-toolbar {
-  --background: rgba(255,255,255,0.06);
-  color: #fff;
-}
-.news-modal ion-item {
-  --background: transparent;
-  --border-color: #555;
-  color: #fff;
-}
-.news-modal ion-button {
-  --background: #f5c518;
-  --color: #000;
-  font-weight: 700;
-}
-
-.modal-details::part(content) {
-  width: min(860px, 92vw);
-  height: auto;         
-  max-height: 85vh;      
-  background: #141414;
-  border-radius: 14px;
-  box-shadow: 0 12px 36px rgba(0,0,0,.65);
-}
-
-
-.modal-details .modal-wrapper {
-  width: min(860px, 92vw) !important;
-  height: auto !important;
-  max-height: 85vh !important;
-  background: #141414 !important;
-  border-radius: 14px !important;
-  box-shadow: 0 12px 36px rgba(0,0,0,.65) !important;
-}
-
-.modal-details ion-header ion-toolbar {
-  --background: rgba(255,255,255,0.06);
-  color: #fff;
-  border-top-left-radius: 14px;
-  border-top-right-radius: 14px;
-}
-
-.modal-details ion-content {
-  --padding-top: 16px;
-  --padding-bottom: 16px;
-}
-
-.detail-layout {
-  display: grid;
-  grid-template-columns: 36% 1fr;
-  gap: 18px;
-  align-items: start;
-}
-
-.movie-modal-img {
-  width: 100%;
   aspect-ratio: 2 / 3;
   object-fit: cover;
-  border-radius: 10px;
-}
-
-
-.detail-tagline {
-  font-style: italic;
-  color: #f5c518;
-  margin: 0 0 6px 0;
-}
-
-.detail-plot {
-  color: #ddd;
-  line-height: 1.55;
-  margin: 0 0 12px 0;
-}
-
-.chip-row { margin: 6px 0 14px; }
-
-.chip {
-  display: inline-block;
-  padding: 6px 10px;
-  margin: 0 8px 8px 0;
-  border-radius: 999px;
-  font-size: 0.78rem;
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.12);
-  color: #eee;
-}
-
-
-.facts-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0,1fr));
-  gap: 10px 22px;
-  margin: 4px 0 12px;
-}
-.facts-grid h5 {
-  font-size: 0.8rem;
-  color: #bdbdbd;
-  margin: 0 0 2px 0;
-  text-transform: uppercase;
-  letter-spacing: .4px;
-}
-.facts-grid p {
-  margin: 0;
-  color: #fff;
-}
-
-
-.notes-wrap {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 14px;
-  margin: 12px 0 8px;
-}
-.notes-block h4 {
-  margin: 0 0 6px 0;
-  font-size: 1rem;
-  font-weight: 700;
-  color: #fff;
-}
-.notes-block ul {
-  margin: 0;
-  padding-left: 18px;
-  color: #ddd;
-}
-
-.notes-block li { margin-bottom: 4px; }
-
-.trailer-row { margin: 10px 0 8px; }
-
-.trailer-btn {
-  display: inline-block;
-  padding: 10px 14px;
-  background: #f5c518;
-  color: #000;
-  border-radius: 8px;
-  font-weight: 800;
-  text-decoration: none;
-}
-.trailer-btn:hover { filter: brightness(1.08); }
-
-.modal-details ion-button {
-  --background: #3a63ff;
-  --color: #fff;
-  font-weight: 600;
-  margin-top: 10px;
-}
-
-.modal-details ion-content {
-  min-height: 600px;
   display: block;
 }
 
+.movie-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  line-height: 1.3;
+  padding-top: 8px;
+}
 
-/* Jonathan Claro a045207 */
+.movie-card-meta {
+  padding-top: 4px;
+  padding-bottom: 16px;
+  text-align: center;
+}
+
+.movie-card-genre {
+  font-size: 0.8rem;
+  color: #ffd700;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+/* navbar topo (igual às outras páginas) */
+.custom-toolbar {
+  --background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.headerTitle {
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+ion-button {
+  --background: transparent;
+  --color: #cfcfcf;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  transition: color 0.2s ease-in-out;
+}
+
+ion-button:hover {
+  --color: #e0b45c;
+}
+
+/* modal base */
+.modal-details {
+  --background: #0d0d0d;
+  color: #fff;
+}
+
+.detail-toolbar {
+  --background: #000;
+  --color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.detail-title {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.detail-content {
+  background-color: #0d0d0d;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* caixa interna do modal (layout poster + texto) */
+.modal-box {
+  border: 2px solid #f5c518;
+  background-color: rgba(0, 0, 0, 0.4);
+  max-width: 900px;
+  margin: 30px auto 60px auto;
+  padding: 24px;
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+/* poster à esquerda */
+.modal-poster {
+  flex-shrink: 0;
+  width: 240px;
+  max-width: 240px;
+  background-color: #2a2a2a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-poster img,
+.modal-poster ion-img,
+.modal-poster .img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* bloco de info à direita */
+.modal-info {
+  flex: 1;
+  color: #fff;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-movie-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.modal-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #ddd;
+  margin: 0 0 24px 0;
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* botão Close discreto, tipo protótipo */
+.close-btn {
+  --background: transparent;
+  --color: #f5c518;
+  --border-color: #f5c518;
+  --border-style: solid;
+  --border-width: 2px;
+  border-radius: 6px;
+  width: fit-content;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  padding-left: 16px;
+  padding-right: 16px;
+}
