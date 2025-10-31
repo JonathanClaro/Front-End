@@ -1,7 +1,45 @@
+.home {
+  --background: #000;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.custom-toolbar {
+  --background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.headerTitle {
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+ion-button {
+  --background: transparent;
+  --color: #cfcfcf;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  font-weight: 400;
+  transition: color 0.2s ease-in-out;
+}
+
+ion-button:hover {
+  --color: #e0b45c;
+}
+
 .hero-fullscreen {
   position: relative;
-  width: 100%;
-  height: 100vh;
+  height: 700px;
   overflow: hidden;
 }
 
@@ -13,204 +51,130 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-  filter: blur(10px) brightness(0.7);
-  transform: scale(1.05);
-  z-index: -1;
-}
-
-.hero-inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-}
-
-.brand {
-  font-size: 8rem;
-  letter-spacing: 4px;
-  font-weight: 800;
-  text-transform: uppercase;
-  margin: 0;
-}
-
-.tagline {
-  font-size: 2rem;
-  letter-spacing: 3px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-
-
-.section-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 40px auto 20px auto;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.trending-section,
-.weekly-section {
-  text-align: center;
-  position: relative;
-}
-
-
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltip-text {
-  visibility: hidden;
-  background-color: rgba(0, 0, 0, 0.85);
-  color: #fff;
-  font-size: 0.75rem;
-  line-height: 1.2;
-  text-align: left;
-  border-radius: 6px;
-  padding: 5px 8px;
-  position: absolute;
-  top: 50%;
-  left: 105%;
-  transform: translateY(-50%);
-  white-space: nowrap;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  pointer-events: none;
-}
-
-.tooltip:hover .tooltip-text {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(-50%) translateX(5px);
-}
-
-
-.home .poster-row {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 24px;
-  padding: 0 8%;
-  justify-items: center;
-}
-
-.home .poster {
-  position: relative;
-  width: 100%;
-  max-width: 260px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: visible;
-}
-
-.home .poster img {
-  width: 100%;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  position: relative;
+  filter: brightness(0.55);
   z-index: 1;
 }
 
-.home .poster:hover img {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px 3px rgba(255, 215, 0, 0.7);
-}
-
-
-.home .rating-badge {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  color: white;
-  font-weight: bold;
-  font-size: 0.9rem;
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.hero-inner {
+  position: relative;
   z-index: 2;
-  pointer-events: none;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
-.rating-green {
-  background-color: #21d07a;
-  box-shadow: 0 0 12px rgba(33, 208, 122, 0.8);
-}
-
-.rating-yellow {
-  background-color: #f5c518;
-  box-shadow: 0 0 12px rgba(245, 197, 24, 0.8);
-}
-
-.rating-red {
-  background-color: #db2360;
-  box-shadow: 0 0 12px rgba(219, 35, 96, 0.8);
-}
-
-
-.about-section {
-  text-align: center;
-  padding: 80px 20px;
-  color: white;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), #000);
-}
-
-.about-title {
-  font-size: 2rem;
+.brand {
+  font-size: 5rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  text-transform: uppercase;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 3px;
+  color: #fff;
 }
 
-.about-text {
-  max-width: 700px;
-  margin: 0 auto;
-  line-height: 1.6;
-  font-size: 1.1rem;
-  opacity: 0.9;
+.tagline {
+  font-size: 1.6rem;
+  font-weight: 400;
+  margin-top: 4px;
+  color: #d3d3d3;
 }
 
-
-.social-icons {
-  margin-top: 30px;
-}
-
-.social-icons a {
-  color: white;
-  margin: 0 15px;
-  font-size: 1.8rem;
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.social-icons a:hover {
-  color: #f5c518;
-  transform: scale(1.15);
-}
-
-
-.footer {
+.section-title {
+  color: #fff;
+  font-weight: 700;
+  margin: 48px 0 28px;
+  font-size: 2.2rem;
+  letter-spacing: 1.5px;
   text-align: center;
-  color: #ccc;
-  padding: 40px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 0.9rem;
+  text-transform: uppercase;
 }
 
-.news-modal {
-  --height:25%;
+.poster-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1120px;
+  flex-wrap: nowrap;
 }
 
+.posterCard {
+  flex: 0 0 265px;
+  height: 395px;
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.5);
+  transition: transform 0.25s ease-in-out, box-shadow 0.25s ease-in-out;
+}
 
-/* Jonathan Claro a045207 */
+.posterCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 25px rgba(255, 255, 255, 0.1);
+}
+
+.posterCard ion-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+.aboutCard {
+  margin: 60px auto;
+  max-width: 700px;
+  background: #1a1a1a;
+  color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.aboutTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.aboutText {
+  display: block;
+  font-size: 0.95rem;
+  color: #cfcfcf;
+  line-height: 1.7;
+  margin: 0 24px 24px;
+}
+
+.socialIcons {
+  margin-top: 10px;
+}
+
+.socialIcons i {
+  font-size: 1.8rem;
+  color: #fff;
+  margin: 0 12px;
+  transition: color 0.2s ease-in-out;
+}
+
+.socialIcons i:hover {
+  color: #e0b45c;
+}
+
+.footerToolbar {
+  --background: #000;
+  color: #aaa;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 6px 0;
+}
+
+.footerToolbar ion-title {
+  font-size: 0.8rem;
+  color: #aaa;
+}
